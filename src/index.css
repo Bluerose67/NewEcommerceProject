@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 
+
 body{
   font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
 }
 .container{width: 90%; margin: auto;}
-header .top-strip{}
+
 
 .bg-org{background: #ff5252 }
 .link:hover{color: #ff5252;}
