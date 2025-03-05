@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from "react-router-dom" 
 import logo from "../../assets/logo.jpg"
 import Search from '../Search'
+import Button from '@mui/material/Button';
+
 
 const Header = () => {
   return (
@@ -42,7 +44,15 @@ const Header = () => {
                 <div className="col2 w-[45%]">
                     <Search/>
                 </div>
-                <div className="col3 w-[30%]"></div>
+                <div className="col3 w-[30%] flex items-center pl-7">
+                    <ul className='flex items-center gap-3'>
+                        <li className='list-none'>
+                            <Link to="/login" className='link transition text-[15px] font-[500]'>Login</Link>
+                             &nbsp; | &nbsp;
+                            <Link to="/register" className='link transition text-[15px] font-[500]'> Register</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
       </header>
