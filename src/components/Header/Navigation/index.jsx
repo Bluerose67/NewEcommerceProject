@@ -1,20 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
+import CategoryPanel from './CategoryPanel';
 import Button from '@mui/material/Button';
 import { RiMenu2Line } from "react-icons/ri";
 import { LiaAngleDownSolid } from "react-icons/lia";
 import { Link } from "react-router-dom" 
 import { GoRocket } from "react-icons/go";
+import "../Navigation/style.css"
 
 
 
 
 const Navigation = () => {
+
+    const [isOpenCatPanel, setIsOpenCatPanel] = useState(false);
+
+    const openCategoryPanel=() => {
+            setIsOpenCatPanel(true);
+    }
+
   return (
+    <>
     <nav className='py-2'>
         <div className="container flex items-center justify-end gap-8">
             <div className="col_1 w-[20%]">
-                <Button variant="text" className='!text-black gap-2 w-full'><RiMenu2Line className='text-[18px]'/>
-                Shop by Categories <LiaAngleDownSolid className='text-[13px] ml-auto'/>
+                <Button variant="text" className='!text-black gap-2 w-full'
+                onClick={openCategoryPanel}
+                ><RiMenu2Line className='text-[18px]'/>
+                Shop by Categories <LiaAngleDownSolid className='text-[13px] ml-auto font-bold'/>
                 </Button>
             </div>
             <div className="col_2 w-[60%]">
@@ -82,6 +94,10 @@ const Navigation = () => {
             </div>
         </div>
     </nav>
+    <CategoryPanel 
+    isOpenCatPanel={isOpenCatPanel} setIsOpenCatPanel = {setIsOpenCatPanel}
+    />
+    </>
   )
 }
 
