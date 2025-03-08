@@ -10,6 +10,10 @@ body{
     overflow-x: hidden;
 
 }
+
+::-webkit-scrollbar { width: 10px !important; height: 10px !important;}
+::-webkit-scrollbar-thumb{background: #ff5252;}
+::-webkit-scrollbar-track{background: #fff;}
 .container{width: 95%; margin: auto;}
 
 
@@ -55,10 +59,21 @@ nav ul button:hover {
 .homeCatSlider .swiper-button-next {
   right: -10px !important;
 }
+
+.homeCatSlider .item{border: 1px solid rgba(0,0,0,0.1);}
+
 .homeCatSlider .swiper-button-prev:hover, .homeCatSlider .swiper-button-next:hover{
   background: #ff5252 !important;
 }
-.homeCatSlider .swiper-button-prev:hover::after,
+/* .homeCatSlider .swiper-button-prev:hover::after,
 .homeCatSlider .swiper-button-next:hover::after {
   background: #fff !important;
-}
+} */
+
+.homeCatSlider .item:hover img { transform: scale(1.2);}
+
+.MuiTabs-indicator{ background: #ff5252 !important; }
+
+.MuiTab-textColorPrimary.Mui-selected{color:#ff5252 !important;}
+
+.productSlider .swiper-wrapper{padding: 15px; margin-left: -15px; margin-right: -15px;}
